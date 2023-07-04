@@ -23,15 +23,14 @@ pip install iv2
 ## 使用示例
 
 ```python
-from pathlib import Path
 from typing import List
 from iv2 import ResNet, l2
-from iv2.model import ResNet47_50Net
 
 
 # Initialize a residual neural network
+# download: http://cmp.felk.cvut.cz/cnnimageretrieval/data/networks/gl18/
 resnet: ResNet = ResNet(
-    runtime_model='models/gl18-tl-resnet50-gem-w-83fdc30.pth',
+    runtime_model='gl18-tl-resnet50-gem-w-83fdc30.pth',
     device='cpu'
 )
 
