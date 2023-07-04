@@ -4,23 +4,44 @@
 
 ## Introduction
 
-Converting images to vectors for image search and image similarity comparison
+Convert images into vectors, which can be used for image search and image similarity comparison
 
-> vector latitude of 512
+> vector latitude is 512
 
-## Dependencies
+## Install
 
-Python interpreter.
+Python interpreter:
 
-- CPython : version 3.8 and above
+- CPython: 3.8 and above
 
-Installed by.
+Installation method:
 
 ```shell
 pip install iv2
 ```
 
-## Reference projects
+## Example of use
+
+```python
+from pathlib import Path
+from typing import list
+from iv2 import ResNet, l2
+from iv2.model import ResNet47_50Net
+
+
+# Initialize a residual neural network
+resnet: ResNet = ResNet(
+     runtime_model='models/gl18-tl-resnet50-gem-w-83fdc30.pth',
+     device='cpu'
+)
+
+
+vector_1: List[float] = resnet.gen_vector('p1.png')
+vector_2: List[float] = resnet.gen_vector('p.png')
+
+print(l2(vector_1, vector_2, sqrt=False))
+```
+
+## reference project
 
 - [cnnimageretrieval-pytorch](https://github.com/filipradenovic/cnnimageretrieval-pytorch)
-- [ImageRetrieval-LSH](https://github.com/yinhaoxs/ImageRetrieval-LSH)

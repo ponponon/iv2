@@ -1,13 +1,11 @@
 from pathlib import Path
 from typing import List
 from iv2 import ResNet, l2
-from iv2.schemas import Runtime
 from iv2.model import ResNet47_50Net
 
 
 # Initialize a residual neural network
 resnet: ResNet = ResNet(
-    runtime=Runtime.PYTORCH,
     runtime_model='models/gl18-tl-resnet50-gem-w-83fdc30.pth',
     device='cpu'
 )
