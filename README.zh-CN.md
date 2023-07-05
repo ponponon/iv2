@@ -20,6 +20,12 @@ Python 解释器:
 pip install iv2
 ```
 
+运行模型，需要权重文件，
+
+下载地址: http://cmp.felk.cvut.cz/cnnimageretrieval/data/networks/gl18/
+
+下载该地址中的 `gl18-tl-resnet50-gem-w-83fdc30.pth` 文件
+
 ## 使用示例
 
 ```python

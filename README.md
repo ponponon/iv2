@@ -20,6 +20,12 @@ Installation method:
 pip install iv2
 ```
 
+Running the model, needing the weights file.
+
+Download at: http://cmp.felk.cvut.cz/cnnimageretrieval/data/networks/gl18/
+
+Download the `gl18-tl-resnet50-gem-w-83fdc30.pth` file from this address
+
 ## Example of use
 
 ```python
